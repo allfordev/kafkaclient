@@ -8,7 +8,7 @@ public class MessageConsumer {
 
     @KafkaListener(id = "myGroup", topics = "order-topic")
     public void listen(String in) {
-    //Logic to consume/process message goes here
+        //Logic to consume/process message goes here
         System.out.println(in);
     }
 }

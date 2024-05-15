@@ -1,7 +1,7 @@
 spring:
-application:
-  name: kafkaclient
-kafka:
-  bootstrap-servers: kafka-service:9092
-  consumer:
-    group-id: "myGroup"
+  application:
+    name: kafkaclient
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "myGroup"

@@ -10,18 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class KafkaclientApplication {
+public class KafkaClientApp {
 
     @Autowired
     Environment env;
 
     @Autowired
     MessageProducer messageProducer;
+
     public static void main(String[] args) {
-        SpringApplication.run(KafkaclientApplication.class, args);
+        SpringApplication.run(KafkaClientApp.class, args);
     }
     @PostMapping("/notify")
-    public String sendNotifation(@RequestBody String message){
+    public String sendNotification(@RequestBody String message){
         System.out.println("sending message : " + message);
         messageProducer.send(message);
         System.out.println("Sent message : " + message);
